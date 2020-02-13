@@ -104,7 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -127,3 +126,9 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
+
+PASSWORD_HASHERS = ( 'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+                     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+                )
+
+LOGIN_URL = 'rango:login'
